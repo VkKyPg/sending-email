@@ -1,26 +1,98 @@
 <!DOCTYPE html>
 <html>
-<body>
-you must fill in everything for this crazy creation to work
-  <form action ='{{upload_url}}' enctype= 'multipart/form-data' method = 'POST'>
-    Email: <br>
-    <input type = 'text' name = 'email'>
-    <br>
-    Email2: <br>
-    <input type = 'text' name = 'email2'>
-    <br>
-    Message: <br>
-    <textarea name = 'message' rows = '10' cols = '30'>
-    </textarea>
-    <br><br>
-    <input type = 'submit' value = 'Send Email'>
-    <br><br> GIF SELECTION <br>
-    <input type = 'text' name = 'user_selection' >
-    <br> TIME SELECTION <br>
-    <input type = 'text' name = 'email_delay'>
-    <br> Upload File: <br>
-     <input type= 'file' name= 'file'>
-     <br><br>
-  </form>
-</body>
+  <head>
+    <title> S.ending S.omewhere S.ometime </title>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        background:#EFEFEF;
+      }#main {
+        width:900px;
+        height: 800px;
+        margin:0 auto;
+        background:#FBE6E6;
+        text-align: center;
+      }
+      #header{
+        padding: 10px;
+      }
+      #email{
+        background: #EA8585;
+        padding: 20px;
+      }
+      #message{
+        background: #E2D3D3;
+        margin: auto;
+        padding: 20px;
+      }
+      #extra{
+        background: #EEF8E6;
+        margin:auto;
+        padding: 20px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+      #send{
+         padding: 100px;
+      }
+      p{
+        font-family: Courier;
+      }
+      h1{
+        font-family:'Lato', sans-serif;
+      }
+      .email{
+        height:100px;
+        display: inline;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action ='{{upload_url}}' enctype= 'multipart/form-data' method = 'POST'>
+      <div id = 'main'>
+
+        <div id = 'header'>
+          <h1> [&#8734] Time [1] Image [2] Share </h1>
+        </div>
+
+        <div id = 'email'>
+            <p> Email </p>
+          <div class = 'email'>
+            <input type = 'text' name = 'email'>
+          </div>
+          <div class = 'email'>
+            <input type = 'text' name = 'email2'>
+          </div>
+        </div>
+
+        <div id = 'message'>
+          <p> Message </p>
+          <textarea name = 'message' rows = '10' cols = '30'> </textarea>
+        </div>
+
+        <div id = 'extra'>
+          <div class = 'left'>
+              <p> GIF </p>
+              <input type = 'text' name = 'user_selection' >
+          </div>
+          <div class = 'middle'>
+              <p> Time Selection </p>
+              <input type = 'text' name = 'email_delay'>
+          </div>
+          <div class = 'right'>
+              <p> Upload File </p>
+              <input type= 'file' name= 'file'>
+          </div>
+        </div>
+
+        <div id = 'send'>
+          <input type = 'submit' value = 'Send Email'>
+        </div>
+
+      </div>
+    </form>
+  </body>
 </html>
